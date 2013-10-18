@@ -20,7 +20,7 @@ public class DataHandler {
 	}
 	
 	public static void addRecord(Table2 record){
-//		if(validValue(record)) throw new IllegalArgumentException("You cannot type Have Empty Value"); 
+		if(validValue(record)) throw new IllegalArgumentException("You cannot type Have Empty Value"); 
 		
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		  
@@ -30,6 +30,12 @@ public class DataHandler {
 	}
 	
 	private static boolean validValue(Table1 record){	
+		
+		return !(record.getItem() != null && record.getDate() != null
+				&& record.getFee() != null && record.getGst() != null);
+	}
+	
+	private static boolean validValue(Table2 record){	
 		
 		return !(record.getItem() != null && record.getDate() != null
 				&& record.getFee() != null && record.getGst() != null);

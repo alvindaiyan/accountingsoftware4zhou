@@ -2,7 +2,6 @@ package com.accsoftware.common;
 
 import java.util.Date;
 
-import com.accsoftware.util.DataHandler;
 
 public class Table2 implements java.io.Serializable  {
 
