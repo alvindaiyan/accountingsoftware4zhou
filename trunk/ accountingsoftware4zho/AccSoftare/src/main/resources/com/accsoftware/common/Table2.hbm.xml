@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.accsoftware.common.Table2" table="table2">
+		<id name="table2_Id" type="java.lang.Integer">
+			<column name="mytable_key" />
+			<generator class="identity" />
+		</id>
+		<property name="date" type="date" column="acc_date" />
+		<property name="item" column="item" />
+		<property name="fee" type="double" column="fee" />
+		<property name="gst" type="double" column="gst" />
+		<property name="accomodation" type="double" column="accomodation" />
+		<property name="transport" type="double" column="transport" />
+		<property name="admissions" type = "double" column="admissions" />		
+		<property name="parking" type = "double" column="parking" />		
+		<property name="dining" type = "double" column="dining" />
+		<property name="wages" type = "double" column="wages" />
+	</class>
+</hibernate-mapping>
