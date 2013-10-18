@@ -2,7 +2,11 @@ package com.accsoftware.persistence;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
- 
+/**
+ * To set up the Hibernate, Do not modify  
+ * @author YAN
+ *
+ */		
 public class HibernateUtil {
  
     private static final SessionFactory sessionFactory = buildSessionFactory();

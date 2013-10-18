@@ -33,7 +33,8 @@ public class Table1Frame extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         quitMenuItem = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        addPanel = new Table1InsertPanel();
+        addPanelTable1 = new Table1InsertPanel();
+        addPanelTable2 = new Table2InsertPanel();
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,7 +66,8 @@ public class Table1Frame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 407, Short.MAX_VALUE)
         );
-        jTabbedPane2.add("Add New Record", addPanel);
+        jTabbedPane2.add("Add New to Table1", addPanelTable1);
+        jTabbedPane2.add("Add New to Table2", addPanelTable2);
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -119,6 +121,7 @@ public class Table1Frame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JMenuItem quitMenuItem;
-    private Table1InsertPanel addPanel;
+    private Table1InsertPanel addPanelTable1;
+    private Table2InsertPanel addPanelTable2;
     // End of variables declaration//GEN-END:variables
 }
