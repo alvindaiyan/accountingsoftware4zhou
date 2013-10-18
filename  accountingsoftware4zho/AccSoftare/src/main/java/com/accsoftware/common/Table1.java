@@ -3,10 +3,12 @@ package com.accsoftware.common;
 import java.util.Date;
 
 public class Table1 implements java.io.Serializable {
-
-	private static final long serialVersionUID = 1L;
 	
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1329814018192038101L;
 	private Integer table1_Id;
 	private Date date;
 	private String item;
