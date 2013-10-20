@@ -1,6 +1,7 @@
 package com.accsoftware.util;
 
 
+import java.sql.Date;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -49,11 +50,14 @@ public class DataHandler {
 	
 	//Read method	
 	@SuppressWarnings("unchecked")
-	public static List<Object> readAll(Object table){
-		String tname = table instanceof Table1?"Table1":"Table2";
-		String hql = "from " + tname;
+	public static List<Object> readAll(String table, Date start, Date end){
+		String hql = "from " + table + " where acc_date >= \'" + start
+				+ "\' and acc_date <= \'" + end + "\' order by acc_date";
+		System.out.println(hql);
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		List<Object> result = session.createQuery(hql).list();
 		return result;
 	}
+	
+	
 }

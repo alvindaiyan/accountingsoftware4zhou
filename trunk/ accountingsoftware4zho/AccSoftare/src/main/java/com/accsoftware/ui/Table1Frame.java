@@ -39,6 +39,7 @@ public class Table1Frame extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         addPanelTable1 = new Table1InsertPanel();
         addPanelTable2 = new Table2InsertPanel();
+        searchAndDisplayPanel = new SearchAndDisplayPanel();
         
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +73,7 @@ public class Table1Frame extends javax.swing.JFrame {
         );
         jTabbedPane2.add("Add New to Table1", addPanelTable1);
         jTabbedPane2.add("Add New to Table2", addPanelTable2);
+        jTabbedPane2.add("Search and Display", searchAndDisplayPanel);
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -127,5 +129,6 @@ public class Table1Frame extends javax.swing.JFrame {
     private javax.swing.JMenuItem quitMenuItem;
     private Table1InsertPanel addPanelTable1;
     private Table2InsertPanel addPanelTable2;
+    private SearchAndDisplayPanel searchAndDisplayPanel;
     // End of variables declaration//GEN-END:variables
 }
