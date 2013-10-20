@@ -217,25 +217,28 @@ public class Table1InsertPanel extends javax.swing.JPanel {
 
     @SuppressWarnings("deprecation")
 	private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        Table1 record = new Table1();
-        if((item.getText().length() == 0) || (consentDate.getDate() == null)){
-        	JOptionPane.showMessageDialog(this.getParent(), "You have entered empty value for Date or Item");
-        	return;
-        }
-        	
-        record.setDate(
-        		new Date(consentDate.getDate().getYear(),
-        				consentDate.getDate().getMonth(),
-        				consentDate.getDate().getDay())
-        		);
-       record.setItem(item.getText());
-        if(cost.getText().length() != 0) record.setFee(Double.parseDouble(cost.getText()));
-        if(gst.getText().length() != 0) record.setGst(Double.parseDouble(gst.getText()));
-        if(vehicle.getText().length() != 0) record.setVehicle(Double.parseDouble(vehicle.getText()));
-        if(stationary.getText().length() != 0) record.setStationary(Double.parseDouble(stationary.getText()));
-        if(wages.getText().length() != 0) record.setWages(Double.parseDouble(wages.getText()));
-        
-        DataHandler.addRecord(record);
+		Table1 record = new Table1();
+		if ((item.getText().length() == 0) || (consentDate.getDate() == null)) {
+			JOptionPane.showMessageDialog(this.getParent(),
+					"You have entered empty value for Date or Item");
+			return;
+		}
+
+		record.setDate(new Date(consentDate.getDate().getYear(), consentDate
+				.getDate().getMonth(), consentDate.getDate().getDay()));
+		record.setItem(item.getText());
+		if (cost.getText().length() != 0)
+			record.setFee(Double.parseDouble(cost.getText()));
+		if (gst.getText().length() != 0)
+			record.setGst(Double.parseDouble(gst.getText()));
+		if (vehicle.getText().length() != 0)
+			record.setVehicle(Double.parseDouble(vehicle.getText()));
+		if (stationary.getText().length() != 0)
+			record.setStationary(Double.parseDouble(stationary.getText()));
+		if (wages.getText().length() != 0)
+			record.setWages(Double.parseDouble(wages.getText()));
+
+		DataHandler.addRecord(record);
         
     }//GEN-LAST:event_addButtonActionPerformed
 
